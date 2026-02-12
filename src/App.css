@@ -108,8 +108,85 @@
   color: #e60073;
 }
 
+.valentine-recipe {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.2);
+  padding: 2.5rem 2rem;
+  max-width: 95vw;
+  width: 650px;
+  margin: 2rem auto;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.valentine-recipe-title {
+  color: #e60073;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Pacifico', cursive, system-ui, sans-serif;
+  text-align: center;
+}
+
+.valentine-recipe-author {
+  color: #b30059;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.valentine-recipe-description {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.valentine-recipe-times {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #fff0f6;
+  border-radius: 1rem;
+  color: #b30059;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.valentine-recipe-section {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.valentine-recipe-section h3 {
+  color: #e60073;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ffb6d5;
+  padding-bottom: 0.5rem;
+}
+
+.valentine-recipe-section ul,
+.valentine-recipe-section ol {
+  color: #333;
+  line-height: 1.8;
+  margin-left: 1.5rem;
+}
+
+.valentine-recipe-section li {
+  margin-bottom: 0.5rem;
+}
+
+.valentine-recipe-section ol li {
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 600px) {
-  .valentine-landing, .valentine-sections {
+  .valentine-landing, .valentine-sections, .valentine-recipe {
     width: 95vw;
     padding: 1.5rem 0.5rem 1.5rem 0.5rem;
   }
@@ -118,5 +195,12 @@
   }
   .valentine-section-title {
     font-size: 1.3rem;
+  }
+  .valentine-recipe-title {
+    font-size: 1.3rem;
+  }
+  .valentine-recipe-times {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
