@@ -1,0 +1,122 @@
+/* Valentine Theme Styles */
+.valentine-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffb6d5 0%, #ff69b4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+.valentine-landing {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.2);
+  padding: 3rem 2rem 2.5rem 2rem;
+  text-align: center;
+  max-width: 90vw;
+  width: 400px;
+  margin: 2rem auto;
+}
+
+.valentine-title {
+  color: #e60073;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Pacifico', cursive, system-ui, sans-serif;
+  letter-spacing: 1px;
+}
+
+.valentine-subtitle {
+  color: #b30059;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.valentine-btn {
+  background: linear-gradient(90deg, #ff69b4 0%, #ffb6d5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.9em 2em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px 0 #ff69b455;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.valentine-btn:hover {
+  background: linear-gradient(90deg, #ffb6d5 0%, #ff69b4 100%);
+  transform: scale(1.05);
+}
+
+.valentine-sections {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.2);
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+  max-width: 95vw;
+  width: 420px;
+  margin: 2rem auto;
+}
+
+.valentine-section-title {
+  color: #e60073;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Pacifico', cursive, system-ui, sans-serif;
+}
+
+.valentine-section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.valentine-section-btn {
+  background: #fff0f6;
+  color: #e60073;
+  border: 2px solid #ff69b4;
+  border-radius: 1.5rem;
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s, transform 0.2s;
+}
+.valentine-section-btn:hover {
+  background: #ffb6d5;
+  color: #fff;
+  border: 2px solid #e60073;
+  transform: scale(1.04);
+}
+
+.valentine-back-btn {
+  background: none;
+  color: #b30059;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.valentine-back-btn:hover {
+  color: #e60073;
+}
+
+@media (max-width: 600px) {
+  .valentine-landing, .valentine-sections {
+    width: 95vw;
+    padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+  }
+  .valentine-title {
+    font-size: 2rem;
+  }
+  .valentine-section-title {
+    font-size: 1.3rem;
+  }
+}
