@@ -13,7 +13,7 @@ function App() {
       {/* LANDING PAGE */}
       {page === 'landing' && (
         <div className="valentine-landing">
-          <h1 className="valentine-title">Happy Valentines Day Michaela!</h1>
+          <h1 className="valentine-title">Happy Valentines Day Tiny Babyyyyyyyy!</h1>
           <p className="valentine-subtitle">Will you be my valentine?</p>
           <button className="valentine-btn" onClick={() => setPage('sections')}>
             I want to be your valentines
