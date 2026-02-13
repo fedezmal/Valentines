@@ -1,0 +1,25 @@
+.spotify-gift-container {
+  background: rgba(255,255,255,0.97);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.2);
+  padding: 2.5rem 2rem;
+  max-width: 95vw;
+  width: 420px;
+  margin: 2rem auto;
+  text-align: center;
+}
+.spotify-gift-container h2 {
+  color: #e60073;
+  font-family: 'Pacifico', cursive, system-ui, sans-serif;
+  margin-bottom: 1rem;
+}
+.spotify-gift-container p {
+  color: #b30059;
+  margin-bottom: 1.5rem;
+}
+.spotify-embed-wrapper {
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 12px #ffb6d555;
+}

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './App.css';
+import PuzzleGame from './PuzzleGame';
+import SpotifyGift from './SpotifyGift';
 
 // ---
 // To customize:
@@ -11,6 +13,7 @@ import './App.css';
 
 function App() {
   const [page, setPage] = useState('landing');
+  const [puzzleSolved, setPuzzleSolved] = useState(false);
 
   return (
     <div className="valentine-bg">
@@ -30,13 +33,25 @@ function App() {
             {/* Add more sections here as you customize! */}
             <button className="valentine-section-btn" onClick={() => setPage('Brownies')}>Brownie Recipe</button>
             <button className="valentine-section-btn">Love Notes</button>
-            <button className="valentine-section-btn">Gallery</button>
+            <button className="valentine-section-btn" onClick={() => { setPuzzleSolved(false); setPage('Puzzle'); }}>Surprise 1</button>
             <button className="valentine-section-btn">More coming soon...</button>
           </div>
           <button className="valentine-back-btn" onClick={() => setPage('landing')}>
             &larr; Back
           </button>
         </div>
+      )}
+
+      {page === 'Puzzle' && !puzzleSolved && (
+        <div>
+          <h2 style={{textAlign: 'center', color: '#e60073', fontFamily: 'Pacifico, cursive'}}>Surprise Puzzle</h2>
+          <PuzzleGame onSolved={() => setPuzzleSolved(true)} />
+          <button className="valentine-back-btn" onClick={() => setPage('sections')}>&larr; Back</button>
+        </div>
+      )}
+
+      {page === 'Puzzle' && puzzleSolved && (
+        <SpotifyGift onBack={() => { setPuzzleSolved(false); setPage('sections'); }} />
       )}
       {page === 'Brownies' && (
         <div className="valentine-recipe">
