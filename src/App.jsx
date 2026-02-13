@@ -2,14 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import PuzzleGame from './PuzzleGame';
 import SpotifyGift from './SpotifyGift';
-
-// ---
-// To customize:
-// - Edit the landing page text and styles as you wish.
-// - Add or remove sections in the 'sections' page below.
-// - For each section, you can add navigation and new components.
-// - All main theme styles are in App.css.
-// ---
+import Wordle from './Wordle'; // 1. Import Wordle
 
 function App() {
   const [page, setPage] = useState('landing');
@@ -17,6 +10,7 @@ function App() {
 
   return (
     <div className="valentine-bg">
+      {/* LANDING PAGE */}
       {page === 'landing' && (
         <div className="valentine-landing">
           <h1 className="valentine-title">Happy Valentines Day Michaela!</h1>
@@ -26,15 +20,22 @@ function App() {
           </button>
         </div>
       )}
+
+      {/* SECTIONS MENU */}
       {page === 'sections' && (
         <div className="valentine-sections">
           <h2 className="valentine-section-title">Choose a section</h2>
           <div className="valentine-section-list">
-            {/* Add more sections here as you customize! */}
             <button className="valentine-section-btn" onClick={() => setPage('Brownies')}>Brownie Recipe</button>
-            <button className="valentine-section-btn">Love Notes</button>
-            <button className="valentine-section-btn" onClick={() => { setPuzzleSolved(false); setPage('Puzzle'); }}>Surprise 1</button>
-            <button className="valentine-section-btn">More coming soon...</button>
+            
+            <button className="valentine-section-btn" onClick={() => { setPuzzleSolved(false); setPage('Puzzle'); }}>
+              Surprise 1
+            </button>
+            
+            {/* 2. Add Button for Wordle */}
+            <button className="valentine-section-btn" onClick={() => setPage('Wordle')}>
+              Surprise 2
+            </button>
           </div>
           <button className="valentine-back-btn" onClick={() => setPage('landing')}>
             &larr; Back
@@ -42,6 +43,41 @@ function App() {
         </div>
       )}
 
+      {/* --- WORDLE GAME SECTION --- */}
+      {page === 'Wordle' && (
+        <div className="valentine-sections" style={{width: 'auto', maxWidth: '600px'}}>
+           <Wordle 
+             onBack={() => setPage('sections')} 
+             onGameWon={() => setPage('WordleGift')} // 3. Redirect to internal gift page
+           />
+        </div>
+      )}
+
+      {/* --- WORDLE GIFT (THE PRIZE) --- */}
+      {page === 'WordleGift' && (
+        <div className="valentine-sections">
+          <h2 style={{color: '#e60073', fontFamily: 'Pacifico, cursive'}}>You got it!</h2>
+          <p style={{fontSize: '1.2rem', marginBottom: '20px'}}>
+            You are my <strong>TINY</strong> little valentine! 💖
+          </p>
+          <div style={{
+            background: '#fff0f6', 
+            padding: '20px', 
+            borderRadius: '10px', 
+            border: '2px dashed #ff69b4',
+            marginBottom: '20px'
+          }}>
+            <p><strong>Redeem this coupon for:</strong></p>
+            <h3 style={{color: '#d63384'}}>One Romantic Dinner Date 🍝</h3>
+            <p style={{fontSize: '0.9rem', color: '#666'}}>(Valid anytime you want!)</p>
+          </div>
+          <button className="valentine-btn" onClick={() => setPage('sections')}>
+            Yay! (Back to Menu)
+          </button>
+        </div>
+      )}
+
+      {/* --- PUZZLE SECTION --- */}
       {page === 'Puzzle' && !puzzleSolved && (
         <div>
           <h2 style={{textAlign: 'center', color: '#e60073', fontFamily: 'Pacifico, cursive'}}>Surprise Puzzle</h2>
@@ -49,22 +85,22 @@ function App() {
           <button className="valentine-back-btn" onClick={() => setPage('sections')}>&larr; Back</button>
         </div>
       )}
-
       {page === 'Puzzle' && puzzleSolved && (
         <SpotifyGift onBack={() => { setPuzzleSolved(false); setPage('sections'); }} />
       )}
+
+      {/* --- RECIPE SECTION --- */}
       {page === 'Brownies' && (
         <div className="valentine-recipe">
           <h2 className="valentine-recipe-title">Fudgy Crinkle-Top Brown Butter Brownies</h2>
-        
-
-          <div className="valentine-recipe-times">
+          {/* ... (Keep your existing recipe code here) ... */}
+           <div className="valentine-recipe-times">
             <span>Prep: 20 min</span>
             <span>Cook: 35 min</span>
             <span>Total: 2 h 25 m</span>
           </div>
-
-          <div className="valentine-recipe-section">
+          
+           <div className="valentine-recipe-section">
             <h3>Ingredients</h3>
             <ul>
               <li>1 cup (226g) salted butter</li>
