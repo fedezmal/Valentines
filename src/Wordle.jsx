@@ -88,7 +88,7 @@ export default function Wordle({ onBack, onGameWon }) {
   return (
     <div className="wordle-container">
       <h2 style={{color: '#e60073', fontFamily: 'Pacifico, cursive', margin: 0}}>Guess the Word</h2>
-      <p style={{marginBottom: 20}}> Hint: Literally you</p>
+      <p style={{marginBottom: 20}}>Hint: Literally you</p>
       
       <div className="wordle-grid">
         {guesses.map((g, i) => (
