@@ -57,9 +57,41 @@ function App() {
       {page === 'WordleGift' && (
         <div className="valentine-sections">
           <h2 style={{color: '#e60073', fontFamily: 'Pacifico, cursive'}}>You got it!</h2>
+          
+          {/* --- NEW LOVE LETTER START --- */}
+          <div style={{
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+            padding: '25px',
+            borderRadius: '15px',
+            margin: '20px auto',
+            maxWidth: '600px',
+            textAlign: 'left',
+            boxShadow: '0 4px 15px rgba(230, 0, 115, 0.15)',
+            lineHeight: '1.6',
+            color: '#444'
+          }}>
+            <p style={{marginBottom: '15px'}}>
+              Happy Valentine's, Michelle. You are really the love of my life. I love every second I spend with you.
+            </p>
+            <p style={{marginBottom: '15px'}}>
+              You're funny, smart, interesting and, of course, beautiful beyond measure. You have understood me and accepted me in a way few people have ever done, you make me feel warm and comfortable, and home is wherever you are. I feel so lucky to have found you, you give my life meaning and you make me want to be better.
+            </p>
+            <p style={{marginBottom: '15px'}}>
+              I love the way you laugh, the way you play with your hair, the way you pucker your lips instead of asking for a kiss, waiting for me to realize. There is nothing about you I don't love deeply, and I cherish every moment we've ever had together.
+            </p>
+            <p style={{marginBottom: '15px'}}>
+              Thank you for loving me like you do. Thank you for making my life better every single day. Thank you for existing.
+            </p>
+            <p style={{fontStyle: 'italic', fontWeight: 'bold', color: '#e60073'}}>
+              I love you, always and forever.
+            </p>
+          </div>
+          {/* --- NEW LOVE LETTER END --- */}
+
           <p style={{fontSize: '1.2rem', marginBottom: '20px'}}>
             You are my <strong>TINY</strong> little valentine! 💖
           </p>
+
           <div style={{
             background: '#fff0f6', 
             padding: '20px', 
@@ -71,6 +103,7 @@ function App() {
             <h3 style={{color: '#d63384'}}>One Romantic Dinner Date 🍝</h3>
             <p style={{fontSize: '0.9rem', color: '#666'}}>(Valid anytime you want!)</p>
           </div>
+
           <button className="valentine-btn" onClick={() => setPage('sections')}>
             Yay! (Back to Menu)
           </button>

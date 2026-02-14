@@ -3,7 +3,7 @@ import './PuzzleGame.css'; // Ensure you have this file or remove the import
 import puzzleImage from './assets/puzzle-image.jpeg';
 
 // CONFIGURATION
-const GRID_ROWS = 6;
+const GRID_ROWS = 5;
 const GRID_COLS = 4;
 const TOTAL_PIECES = GRID_ROWS * GRID_COLS;
 
